@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"time"
 
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -43,12 +44,13 @@ func (a *Api) FormHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	userInfo := models.UserInfo{
-		Name:     r.FormValue("name"),
-		Email:    r.FormValue("email"),
-		Age:      r.FormValue("age-range"),
-		Location: r.FormValue("location"),
-		Gpu:      r.FormValue("gpu"),
-		Cpu:      r.FormValue("cpu"),
+		Name:           r.FormValue("name"),
+		Email:          r.FormValue("email"),
+		Age:            r.FormValue("age-range"),
+		Location:       r.FormValue("location"),
+		Gpu:            r.FormValue("gpu"),
+		Cpu:            r.FormValue("cpu"),
+		SubmissionDate: time.Now().UTC().Format("2006-01-02"),
 	}
 	a.m.StoreBetaApplications(userInfo)
 	currentDir, _ := filepath.Abs(".")
