@@ -61,6 +61,6 @@ clone Beta Application Web Server with git bash
   cd WebserBetaApplicationForm/cmd
 ```
 ```
-go run main.go
+  go run main.go
 ```
     
