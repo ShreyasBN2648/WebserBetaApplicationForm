@@ -56,6 +56,11 @@ clone Beta Application Web Server with git bash
 
 ```bash
   git clone https://github.com/ShreyasBN2648/WebserBetaApplicationForm.git
+```
+```
   cd WebserBetaApplicationForm/cmd
+```
+```
+go run main.go
 ```
     
