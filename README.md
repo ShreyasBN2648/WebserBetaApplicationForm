@@ -1,4 +1,3 @@
-    
 # Nyxborn Beta Tester Application WebServer
 
 This is a simple web server for handling beta tester applications for the video game Nyxborn. The server provides two main endpoints and stores submitted applications in a MongoDB collection.
