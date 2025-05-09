@@ -40,8 +40,6 @@ func main() {
 	formServer := http.FileServer(http.Dir("./staticHTML"))
 	http.Handle("/", formServer)
 	http.HandleFunc("/form", a.FormHandler)
-	// a.Serv.Handle("/", formServer)
-	// a.Serv.HandleFunc("/form", a.FormHandler)
 	l.Print("Starting server at port 8000")
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", c.Port), nil); err != nil {
 		l.Fatal().
